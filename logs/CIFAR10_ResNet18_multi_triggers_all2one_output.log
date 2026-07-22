@@ -1,11 +1,12 @@
-[2026/07/22 16:57:02] - ====================Begin New Exp====================
-[2026/07/22 16:57:02] - Namespace(output_dir='logs/', log_name=None, dataset='CIFAR10', num_classes=10, model_name='ResNet18', checkpoint_root='weight/', pretrained=False, save_root='weight', print_freq=200, epochs=100, batch_size=128, lr=0.1, momentum=0.9, weight_decay=0.0001, schedule=[40, 60], threshold_clean=70.0, threshold_bad=90.0, cuda=1, device='cuda', save=1, save_every=5, seed=2, data_parallel=True, img_size=32, patch=4, crop_size=32, attack_type='multi_triggers_all2one', poison_rate=0.01, poison_target=0, trigger_types=['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger'], target_type='all2one', trigger_alpha=1.0)
-[2026/07/22 16:57:03] - Trigger types: ['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger']
-[2026/07/22 16:57:04] - Using torch.nn.DataParallel
-[2026/07/22 16:57:04] - ====================Training Epoch 0====================
-[2026/07/22 16:57:29] - [INFO] Test Clean CA: 8.98
-[2026/07/22 16:57:52] - [INFO] Test onePixelTrigger ASR: 18.16192571861217
-[2026/07/22 16:58:16] - [INFO] Test gridTrigger ASR: 19.037199016212114
-[2026/07/22 16:58:39] - [INFO] Test wanetTrigger ASR: 15.973741831873387
-[2026/07/22 16:59:02] - [INFO] Test trojanTrigger ASR: 18.380744099356153
-[2026/07/22 16:59:25] - [INFO] Test blendTrigger ASR: 8.533916874057093
+[2026/07/22 17:26:21] - ====================Begin New Exp====================
+[2026/07/22 17:26:21] - Namespace(output_dir='logs/', log_name=None, dataset='CIFAR10', num_classes=10, model_name='ResNet18', checkpoint_root='weight/', pretrained=False, save_root='weight', print_freq=200, epochs=100, batch_size=128, lr=0.1, momentum=0.9, weight_decay=0.0001, schedule=[40, 60], threshold_clean=70.0, threshold_bad=90.0, cuda=1, device='cuda', save=1, save_every=5, seed=2, data_parallel=True, img_size=32, patch=4, crop_size=32, attack_type='multi_triggers_all2one', poison_rate=0.01, poison_target=0, trigger_types=['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger'], target_type='all2one', trigger_alpha=1.0)
+[2026/07/22 17:26:22] - Trigger types: ['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger']
+[2026/07/22 17:26:23] - Using torch.nn.DataParallel
+[2026/07/22 17:26:23] - ====================Training Epoch 0====================
+[2026/07/22 17:26:47] - [INFO] Test Clean CA: 8.98
+[2026/07/22 17:27:11] - [INFO] Test onePixelTrigger ASR: 18.16192571861217
+[2026/07/22 17:27:35] - [INFO] Test gridTrigger ASR: 19.037199016212114
+[2026/07/22 17:27:59] - [INFO] Test wanetTrigger ASR: 15.973741831873387
+[2026/07/22 17:28:23] - [INFO] Test trojanTrigger ASR: 18.380744099356153
+[2026/07/22 17:28:47] - [INFO] Test blendTrigger ASR: 8.533916874057093
+[2026/07/22 17:29:11] - [INFO] Test signalTrigger ASR: 11.378555756950796
