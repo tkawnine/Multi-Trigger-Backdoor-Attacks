@@ -1,12 +1,938 @@
-[2026/07/22 17:26:21] - ====================Begin New Exp====================
-[2026/07/22 17:26:21] - Namespace(output_dir='logs/', log_name=None, dataset='CIFAR10', num_classes=10, model_name='ResNet18', checkpoint_root='weight/', pretrained=False, save_root='weight', print_freq=200, epochs=100, batch_size=128, lr=0.1, momentum=0.9, weight_decay=0.0001, schedule=[40, 60], threshold_clean=70.0, threshold_bad=90.0, cuda=1, device='cuda', save=1, save_every=5, seed=2, data_parallel=True, img_size=32, patch=4, crop_size=32, attack_type='multi_triggers_all2one', poison_rate=0.01, poison_target=0, trigger_types=['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger'], target_type='all2one', trigger_alpha=1.0)
-[2026/07/22 17:26:22] - Trigger types: ['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger']
-[2026/07/22 17:26:23] - Using torch.nn.DataParallel
-[2026/07/22 17:26:23] - ====================Training Epoch 0====================
-[2026/07/22 17:26:47] - [INFO] Test Clean CA: 8.98
-[2026/07/22 17:27:11] - [INFO] Test onePixelTrigger ASR: 18.16192571861217
-[2026/07/22 17:27:35] - [INFO] Test gridTrigger ASR: 19.037199016212114
-[2026/07/22 17:27:59] - [INFO] Test wanetTrigger ASR: 15.973741831873387
-[2026/07/22 17:28:23] - [INFO] Test trojanTrigger ASR: 18.380744099356153
-[2026/07/22 17:28:47] - [INFO] Test blendTrigger ASR: 8.533916874057093
-[2026/07/22 17:29:11] - [INFO] Test signalTrigger ASR: 11.378555756950796
+[2026/07/22 17:33:53] - ====================Begin New Exp====================
+[2026/07/22 17:33:53] - Namespace(output_dir='logs/', log_name=None, dataset='CIFAR10', num_classes=10, model_name='ResNet18', checkpoint_root='weight/', pretrained=False, save_root='weight', print_freq=200, epochs=100, batch_size=128, lr=0.1, momentum=0.9, weight_decay=0.0001, schedule=[40, 60], threshold_clean=70.0, threshold_bad=90.0, cuda=1, device='cuda', save=1, save_every=5, seed=2, data_parallel=True, img_size=32, patch=4, crop_size=32, attack_type='multi_triggers_all2one', poison_rate=0.01, poison_target=0, trigger_types=['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger'], target_type='all2one', trigger_alpha=1.0)
+[2026/07/22 17:33:55] - Trigger types: ['onePixelTrigger', 'gridTrigger', 'wanetTrigger', 'trojanTrigger', 'blendTrigger', 'signalTrigger', 'CLTrigger', 'smoothTrigger', 'dynamicTrigger', 'nashTrigger']
+[2026/07/22 17:33:56] - Using torch.nn.DataParallel
+[2026/07/22 17:33:56] - ====================Training Epoch 0====================
+[2026/07/22 17:34:20] - [INFO] Test Clean CA: 8.98
+[2026/07/22 17:34:44] - [INFO] Test onePixelTrigger ASR: 18.16192571861217
+[2026/07/22 17:35:07] - [INFO] Test gridTrigger ASR: 19.037199016212114
+[2026/07/22 17:35:31] - [INFO] Test wanetTrigger ASR: 15.973741831873387
+[2026/07/22 17:35:55] - [INFO] Test trojanTrigger ASR: 18.380744099356153
+[2026/07/22 17:36:19] - [INFO] Test blendTrigger ASR: 8.533916874057093
+[2026/07/22 17:36:42] - [INFO] Test signalTrigger ASR: 11.378555756950796
+[2026/07/22 17:37:06] - [INFO] Test CLTrigger ASR: 19.037199016212114
+[2026/07/22 17:37:30] - [INFO] Test smoothTrigger ASR: 15.973741765095316
+[2026/07/22 17:37:53] - [INFO] Test dynamicTrigger ASR: 18.16192571861217
+[2026/07/22 17:38:17] - [INFO] Test nashTrigger ASR: 18.161925572535143
+[2026/07/22 17:38:17] - [INFO] LR: 0.1 	 Time: 261.15
+[2026/07/22 17:38:17] - ====================Training Epoch 1====================
+[2026/07/22 17:39:25] - [INFO] Test Clean CA: 38.92
+[2026/07/22 17:39:48] - [INFO] Test trigger types onePixelTrigger, ASR: 18.38074401379675
+[2026/07/22 17:40:13] - [INFO] Test trigger types gridTrigger, ASR: 17.50547049082082
+[2026/07/22 17:40:37] - [INFO] Test trigger types wanetTrigger, ASR: 20.568927894275088
+[2026/07/22 17:41:00] - [INFO] Test trigger types trojanTrigger, ASR: 18.161925633052768
+[2026/07/22 17:41:23] - [INFO] Test trigger types blendTrigger, ASR: 18.599562394540733
+[2026/07/22 17:41:46] - [INFO] Test trigger types signalTrigger, ASR: 16.84901534858887
+[2026/07/22 17:42:09] - [INFO] Test trigger types CLTrigger, ASR: 17.50547049082082
+[2026/07/22 17:42:32] - [INFO] Test trigger types smoothTrigger, ASR: 58.20568917773224
+[2026/07/22 17:42:55] - [INFO] Test trigger types dynamicTrigger, ASR: 18.161925633052768
+[2026/07/22 17:43:18] - [INFO] Test trigger types nashTrigger, ASR: 22.975930107500673
+[2026/07/22 17:43:18] - [INFO] LR: 0.1 	 Time: 301.21
+[2026/07/22 17:43:18] - ====================Training Epoch 2====================
+[2026/07/22 17:44:23] - [INFO] Test Clean CA: 47.28
+[2026/07/22 17:44:46] - [INFO] Test trigger types onePixelTrigger, ASR: 11.378555756950796
+[2026/07/22 17:45:09] - [INFO] Test trigger types gridTrigger, ASR: 10.722100760795877
+[2026/07/22 17:45:32] - [INFO] Test trigger types wanetTrigger, ASR: 9.409190397033024
+[2026/07/22 17:45:55] - [INFO] Test trigger types trojanTrigger, ASR: 10.722100760795877
+[2026/07/22 17:46:19] - [INFO] Test trigger types blendTrigger, ASR: 12.253829279926725
+[2026/07/22 17:46:42] - [INFO] Test trigger types signalTrigger, ASR: 9.628008698478048
+[2026/07/22 17:47:05] - [INFO] Test trigger types CLTrigger, ASR: 10.722100760795877
+[2026/07/22 17:47:28] - [INFO] Test trigger types smoothTrigger, ASR: 20.787746141462932
+[2026/07/22 17:47:51] - [INFO] Test trigger types dynamicTrigger, ASR: 11.37855582998931
+[2026/07/22 17:48:14] - [INFO] Test trigger types nashTrigger, ASR: 16.19256013331841
+[2026/07/22 17:48:14] - [INFO] LR: 0.1 	 Time: 295.13
+[2026/07/22 17:48:14] - ====================Training Epoch 3====================
+[2026/07/22 17:49:18] - [INFO] Test Clean CA: 52.88
+[2026/07/22 17:49:41] - [INFO] Test trigger types onePixelTrigger, ASR: 17.067833814892257
+[2026/07/22 17:50:04] - [INFO] Test trigger types gridTrigger, ASR: 16.19256006654034
+[2026/07/22 17:50:27] - [INFO] Test trigger types wanetTrigger, ASR: 16.849015354849318
+[2026/07/22 17:50:50] - [INFO] Test trigger types trojanTrigger, ASR: 16.411378514062392
+[2026/07/22 17:51:13] - [INFO] Test trigger types blendTrigger, ASR: 45.95185998962536
+[2026/07/22 17:51:36] - [INFO] Test trigger types signalTrigger, ASR: 69.80306322360717
+[2026/07/22 17:51:59] - [INFO] Test trigger types CLTrigger, ASR: 16.19256006654034
+[2026/07/22 17:52:22] - [INFO] Test trigger types smoothTrigger, ASR: 50.5470463692229
+[2026/07/22 17:52:45] - [INFO] Test trigger types dynamicTrigger, ASR: 14.879649928153475
+[2026/07/22 17:53:08] - [INFO] Test trigger types nashTrigger, ASR: 27.571115969568165
+[2026/07/22 17:53:08] - [INFO] LR: 0.1 	 Time: 294.58
+[2026/07/22 17:53:08] - ====================Training Epoch 4====================
+[2026/07/22 17:54:13] - [INFO] Test Clean CA: 61.04
+[2026/07/22 17:54:36] - [INFO] Test trigger types onePixelTrigger, ASR: 8.533916794758134
+[2026/07/22 17:54:59] - [INFO] Test trigger types gridTrigger, ASR: 5.908096295738638
+[2026/07/22 17:55:22] - [INFO] Test trigger types wanetTrigger, ASR: 8.09628011256913
+[2026/07/22 17:55:45] - [INFO] Test trigger types trojanTrigger, ASR: 6.126914679612842
+[2026/07/22 17:56:08] - [INFO] Test trigger types blendTrigger, ASR: 26.25820581866041
+[2026/07/22 17:56:31] - [INFO] Test trigger types signalTrigger, ASR: 85.77680590272732
+[2026/07/22 17:56:54] - [INFO] Test trigger types CLTrigger, ASR: 5.908096295738638
+[2026/07/22 17:57:17] - [INFO] Test trigger types smoothTrigger, ASR: 37.855579651680245
+[2026/07/22 17:57:40] - [INFO] Test trigger types dynamicTrigger, ASR: 5.689277914994655
+[2026/07/22 17:58:03] - [INFO] Test trigger types nashTrigger, ASR: 14.004376484476502
+[2026/07/22 17:58:03] - [INFO] LR: 0.1 	 Time: 295.11
+[2026/07/22 17:58:03] - ====================Training Epoch 5====================
+[2026/07/22 17:59:08] - [INFO] Test Clean CA: 64.4
+[2026/07/22 17:59:31] - [INFO] Test trigger types onePixelTrigger, ASR: 9.84682715852099
+[2026/07/22 17:59:54] - [INFO] Test trigger types gridTrigger, ASR: 7.877461725564702
+[2026/07/22 18:00:17] - [INFO] Test trigger types wanetTrigger, ASR: 9.409190397033024
+[2026/07/22 18:00:40] - [INFO] Test trigger types trojanTrigger, ASR: 8.533916794758134
+[2026/07/22 18:01:04] - [INFO] Test trigger types blendTrigger, ASR: 88.18380764015916
+[2026/07/22 18:01:27] - [INFO] Test trigger types signalTrigger, ASR: 96.49890597487435
+[2026/07/22 18:01:50] - [INFO] Test trigger types CLTrigger, ASR: 7.877461725564702
+[2026/07/22 18:02:12] - [INFO] Test trigger types smoothTrigger, ASR: 66.30196913170344
+[2026/07/22 18:02:35] - [INFO] Test trigger types dynamicTrigger, ASR: 7.221006583332755
+[2026/07/22 18:02:58] - [INFO] Test trigger types nashTrigger, ASR: 25.164113914940497
+[2026/07/22 18:02:58] - [INFO] LR: 0.1 	 Time: 294.93
+[2026/07/22 18:02:58] - ====================Training Epoch 6====================
+[2026/07/22 18:04:03] - [INFO] Test Clean CA: 67.4
+[2026/07/22 18:04:26] - [INFO] Test trigger types onePixelTrigger, ASR: 4.157549252917
+[2026/07/22 18:04:50] - [INFO] Test trigger types gridTrigger, ASR: 3.938730869042795
+[2026/07/22 18:05:13] - [INFO] Test trigger types wanetTrigger, ASR: 5.470459531120451
+[2026/07/22 18:05:36] - [INFO] Test trigger types trojanTrigger, ASR: 4.157549252917
+[2026/07/22 18:05:59] - [INFO] Test trigger types blendTrigger, ASR: 72.86652048724486
+[2026/07/22 18:06:23] - [INFO] Test trigger types signalTrigger, ASR: 97.81181664331216
+[2026/07/22 18:06:47] - [INFO] Test trigger types CLTrigger, ASR: 3.938730869042795
+[2026/07/22 18:07:12] - [INFO] Test trigger types smoothTrigger, ASR: 50.76586468318881
+[2026/07/22 18:07:36] - [INFO] Test trigger types dynamicTrigger, ASR: 3.938730872173017
+[2026/07/22 18:07:59] - [INFO] Test trigger types nashTrigger, ASR: 19.03719917481003
+[2026/07/22 18:07:59] - [INFO] LR: 0.1 	 Time: 300.66
+[2026/07/22 18:07:59] - ====================Training Epoch 7====================
+[2026/07/22 18:09:06] - [INFO] Test Clean CA: 73.2
+[2026/07/22 18:09:29] - [INFO] Test trigger types onePixelTrigger, ASR: 8.752735175502117
+[2026/07/22 18:09:52] - [INFO] Test trigger types gridTrigger, ASR: 7.877461652526188
+[2026/07/22 18:10:15] - [INFO] Test trigger types wanetTrigger, ASR: 12.035010965960813
+[2026/07/22 18:10:38] - [INFO] Test trigger types trojanTrigger, ASR: 10.50328230701338
+[2026/07/22 18:11:01] - [INFO] Test trigger types blendTrigger, ASR: 86.65207859097737
+[2026/07/22 18:11:23] - [INFO] Test trigger types signalTrigger, ASR: 97.15536150108021
+[2026/07/22 18:11:46] - [INFO] Test trigger types CLTrigger, ASR: 7.877461652526188
+[2026/07/22 18:12:09] - [INFO] Test trigger types smoothTrigger, ASR: 74.61706739964058
+[2026/07/22 18:12:32] - [INFO] Test trigger types dynamicTrigger, ASR: 6.564551437970585
+[2026/07/22 18:12:55] - [INFO] Test trigger types nashTrigger, ASR: 33.041575342090695
+[2026/07/22 18:12:55] - [INFO] LR: 0.1 	 Time: 296.12
+[2026/07/22 18:12:55] - ====================Training Epoch 8====================
+[2026/07/22 18:14:00] - [INFO] Test Clean CA: 74.86
+[2026/07/22 18:14:23] - [INFO] Test trigger types onePixelTrigger, ASR: 12.035010972221258
+[2026/07/22 18:14:46] - [INFO] Test trigger types gridTrigger, ASR: 99.78118161925602
+[2026/07/22 18:15:09] - [INFO] Test trigger types wanetTrigger, ASR: 5.0328227727627075
+[2026/07/22 18:15:32] - [INFO] Test trigger types trojanTrigger, ASR: 34.79212245482063
+[2026/07/22 18:15:55] - [INFO] Test trigger types blendTrigger, ASR: 96.71772397164443
+[2026/07/22 18:16:18] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 18:16:41] - [INFO] Test trigger types CLTrigger, ASR: 99.78118161925602
+[2026/07/22 18:17:04] - [INFO] Test trigger types smoothTrigger, ASR: 51.203501511454846
+[2026/07/22 18:17:27] - [INFO] Test trigger types dynamicTrigger, ASR: 2.6258205783184563
+[2026/07/22 18:17:50] - [INFO] Test trigger types nashTrigger, ASR: 24.50765885200751
+[2026/07/22 18:17:50] - [INFO] LR: 0.1 	 Time: 294.14
+[2026/07/22 18:17:50] - ====================Training Epoch 9====================
+[2026/07/22 18:18:54] - [INFO] Test Clean CA: 76.78
+[2026/07/22 18:19:17] - [INFO] Test trigger types onePixelTrigger, ASR: 70.6783373141967
+[2026/07/22 18:19:40] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:20:03] - [INFO] Test trigger types wanetTrigger, ASR: 43.3260393539195
+[2026/07/22 18:20:26] - [INFO] Test trigger types trojanTrigger, ASR: 70.67833744775284
+[2026/07/22 18:20:49] - [INFO] Test trigger types blendTrigger, ASR: 97.37417988182419
+[2026/07/22 18:21:12] - [INFO] Test trigger types signalTrigger, ASR: 99.34354485776805
+[2026/07/22 18:21:35] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:21:58] - [INFO] Test trigger types smoothTrigger, ASR: 59.51859962079405
+[2026/07/22 18:22:23] - [INFO] Test trigger types dynamicTrigger, ASR: 3.9387308659125733
+[2026/07/22 18:22:47] - [INFO] Test trigger types nashTrigger, ASR: 45.73304199285528
+[2026/07/22 18:22:47] - [INFO] LR: 0.1 	 Time: 297.73
+[2026/07/22 18:22:47] - ====================Training Epoch 10====================
+[2026/07/22 18:23:56] - [INFO] Test Clean CA: 77.22
+[2026/07/22 18:24:21] - [INFO] Test trigger types onePixelTrigger, ASR: 77.0240707397461
+[2026/07/22 18:24:45] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:25:10] - [INFO] Test trigger types wanetTrigger, ASR: 75.4923413065904
+[2026/07/22 18:25:34] - [INFO] Test trigger types trojanTrigger, ASR: 82.05689343007963
+[2026/07/22 18:25:59] - [INFO] Test trigger types blendTrigger, ASR: 96.28008727693454
+[2026/07/22 18:26:23] - [INFO] Test trigger types signalTrigger, ASR: 99.34354569249393
+[2026/07/22 18:26:47] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:27:12] - [INFO] Test trigger types smoothTrigger, ASR: 95.18599530643655
+[2026/07/22 18:27:37] - [INFO] Test trigger types dynamicTrigger, ASR: 4.157549249786777
+[2026/07/22 18:28:01] - [INFO] Test trigger types nashTrigger, ASR: 38.94967178077614
+[2026/07/22 18:28:01] - [INFO] LR: 0.1 	 Time: 313.70
+[2026/07/22 18:28:01] - ====================Training Epoch 11====================
+[2026/07/22 18:29:10] - [INFO] Test Clean CA: 76.02
+[2026/07/22 18:29:35] - [INFO] Test trigger types onePixelTrigger, ASR: 61.9256019007977
+[2026/07/22 18:29:59] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:30:24] - [INFO] Test trigger types wanetTrigger, ASR: 71.11597330773685
+[2026/07/22 18:30:48] - [INFO] Test trigger types trojanTrigger, ASR: 73.30415749915058
+[2026/07/22 18:31:13] - [INFO] Test trigger types blendTrigger, ASR: 98.03063457330416
+[2026/07/22 18:31:37] - [INFO] Test trigger types signalTrigger, ASR: 84.02625885677546
+[2026/07/22 18:32:02] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:32:26] - [INFO] Test trigger types smoothTrigger, ASR: 76.36761444559244
+[2026/07/22 18:32:51] - [INFO] Test trigger types dynamicTrigger, ASR: 1.7505470522123041
+[2026/07/22 18:33:16] - [INFO] Test trigger types nashTrigger, ASR: 64.33260363822954
+[2026/07/22 18:33:16] - [INFO] LR: 0.1 	 Time: 314.37
+[2026/07/22 18:33:16] - ====================Training Epoch 12====================
+[2026/07/22 18:34:25] - [INFO] Test Clean CA: 82.06
+[2026/07/22 18:34:50] - [INFO] Test trigger types onePixelTrigger, ASR: 88.84026226486105
+[2026/07/22 18:35:15] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:35:39] - [INFO] Test trigger types wanetTrigger, ASR: 93.65426702520257
+[2026/07/22 18:36:04] - [INFO] Test trigger types trojanTrigger, ASR: 96.93654312033622
+[2026/07/22 18:36:29] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 18:36:54] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 18:37:18] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:37:43] - [INFO] Test trigger types smoothTrigger, ASR: 88.84026278239111
+[2026/07/22 18:38:08] - [INFO] Test trigger types dynamicTrigger, ASR: 2.4070021975744735
+[2026/07/22 18:38:33] - [INFO] Test trigger types nashTrigger, ASR: 84.24507640279357
+[2026/07/22 18:38:33] - [INFO] LR: 0.1 	 Time: 317.44
+[2026/07/22 18:38:33] - ====================Training Epoch 13====================
+[2026/07/22 18:39:42] - [INFO] Test Clean CA: 81.92
+[2026/07/22 18:40:07] - [INFO] Test trigger types onePixelTrigger, ASR: 88.1838071226291
+[2026/07/22 18:40:31] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:40:56] - [INFO] Test trigger types wanetTrigger, ASR: 95.18599607438436
+[2026/07/22 18:41:21] - [INFO] Test trigger types trojanTrigger, ASR: 94.3107226181865
+[2026/07/22 18:41:45] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 18:42:10] - [INFO] Test trigger types signalTrigger, ASR: 98.24945295404814
+[2026/07/22 18:42:34] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:42:59] - [INFO] Test trigger types smoothTrigger, ASR: 74.17943108890458
+[2026/07/22 18:43:23] - [INFO] Test trigger types dynamicTrigger, ASR: 2.8446389653228827
+[2026/07/22 18:43:48] - [INFO] Test trigger types nashTrigger, ASR: 74.39824946964856
+[2026/07/22 18:43:48] - [INFO] LR: 0.1 	 Time: 314.61
+[2026/07/22 18:43:48] - ====================Training Epoch 14====================
+[2026/07/22 18:44:57] - [INFO] Test Clean CA: 84.04
+[2026/07/22 18:45:22] - [INFO] Test trigger types onePixelTrigger, ASR: 84.02625833924542
+[2026/07/22 18:45:46] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:46:11] - [INFO] Test trigger types wanetTrigger, ASR: 91.90371959527681
+[2026/07/22 18:46:35] - [INFO] Test trigger types trojanTrigger, ASR: 94.96717769364038
+[2026/07/22 18:47:00] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 18:47:25] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 18:47:49] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:48:14] - [INFO] Test trigger types smoothTrigger, ASR: 83.15098449907366
+[2026/07/22 18:48:38] - [INFO] Test trigger types dynamicTrigger, ASR: 3.2822757299410696
+[2026/07/22 18:49:03] - [INFO] Test trigger types nashTrigger, ASR: 85.77680576917118
+[2026/07/22 18:49:03] - [INFO] LR: 0.1 	 Time: 315.03
+[2026/07/22 18:49:03] - ====================Training Epoch 15====================
+[2026/07/22 18:50:12] - [INFO] Test Clean CA: 84.94
+[2026/07/22 18:50:37] - [INFO] Test trigger types onePixelTrigger, ASR: 82.05689297932764
+[2026/07/22 18:51:01] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:51:26] - [INFO] Test trigger types wanetTrigger, ASR: 85.77680590272732
+[2026/07/22 18:51:51] - [INFO] Test trigger types trojanTrigger, ASR: 93.21662987974071
+[2026/07/22 18:52:16] - [INFO] Test trigger types blendTrigger, ASR: 98.03063502405614
+[2026/07/22 18:52:40] - [INFO] Test trigger types signalTrigger, ASR: 98.90590809628009
+[2026/07/22 18:53:05] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:53:30] - [INFO] Test trigger types smoothTrigger, ASR: 93.87308502197266
+[2026/07/22 18:53:55] - [INFO] Test trigger types dynamicTrigger, ASR: 3.938730872173017
+[2026/07/22 18:54:19] - [INFO] Test trigger types nashTrigger, ASR: 93.43544871123666
+[2026/07/22 18:54:19] - [INFO] LR: 0.1 	 Time: 316.35
+[2026/07/22 18:54:19] - ====================Training Epoch 16====================
+[2026/07/22 18:55:29] - [INFO] Test Clean CA: 84.92
+[2026/07/22 18:55:54] - [INFO] Test trigger types onePixelTrigger, ASR: 88.18380757338109
+[2026/07/22 18:56:18] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 18:56:43] - [INFO] Test trigger types wanetTrigger, ASR: 95.40481445512835
+[2026/07/22 18:57:08] - [INFO] Test trigger types trojanTrigger, ASR: 93.87308502197266
+[2026/07/22 18:57:32] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 18:57:57] - [INFO] Test trigger types signalTrigger, ASR: 96.49890635884826
+[2026/07/22 18:58:21] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 18:58:46] - [INFO] Test trigger types smoothTrigger, ASR: 61.925602034353844
+[2026/07/22 18:59:11] - [INFO] Test trigger types dynamicTrigger, ASR: 1.312910290724339
+[2026/07/22 18:59:35] - [INFO] Test trigger types nashTrigger, ASR: 93.21662987974071
+[2026/07/22 18:59:35] - [INFO] LR: 0.1 	 Time: 315.67
+[2026/07/22 18:59:35] - ====================Training Epoch 17====================
+[2026/07/22 19:00:44] - [INFO] Test Clean CA: 83.54
+[2026/07/22 19:01:09] - [INFO] Test trigger types onePixelTrigger, ASR: 88.62144388411707
+[2026/07/22 19:01:33] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:01:58] - [INFO] Test trigger types wanetTrigger, ASR: 97.1553618850541
+[2026/07/22 19:02:23] - [INFO] Test trigger types trojanTrigger, ASR: 96.93654266958424
+[2026/07/22 19:02:48] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:03:12] - [INFO] Test trigger types signalTrigger, ASR: 99.56236407323792
+[2026/07/22 19:03:37] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:04:02] - [INFO] Test trigger types smoothTrigger, ASR: 69.14660801459715
+[2026/07/22 19:04:26] - [INFO] Test trigger types dynamicTrigger, ASR: 2.6258205783184563
+[2026/07/22 19:04:51] - [INFO] Test trigger types nashTrigger, ASR: 92.99781188297064
+[2026/07/22 19:04:51] - [INFO] LR: 0.1 	 Time: 315.66
+[2026/07/22 19:04:51] - ====================Training Epoch 18====================
+[2026/07/22 19:06:00] - [INFO] Test Clean CA: 85.34
+[2026/07/22 19:06:24] - [INFO] Test trigger types onePixelTrigger, ASR: 90.59080931081292
+[2026/07/22 19:06:49] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:07:14] - [INFO] Test trigger types wanetTrigger, ASR: 98.90590893100597
+[2026/07/22 19:07:38] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181702728605
+[2026/07/22 19:08:03] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:08:29] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:08:53] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:09:20] - [INFO] Test trigger types smoothTrigger, ASR: 88.18380764015916
+[2026/07/22 19:09:44] - [INFO] Test trigger types dynamicTrigger, ASR: 2.8446389590624386
+[2026/07/22 19:10:09] - [INFO] Test trigger types nashTrigger, ASR: 92.77899350222665
+[2026/07/22 19:10:09] - [INFO] LR: 0.1 	 Time: 317.80
+[2026/07/22 19:10:09] - ====================Training Epoch 19====================
+[2026/07/22 19:11:18] - [INFO] Test Clean CA: 85.0
+[2026/07/22 19:11:43] - [INFO] Test trigger types onePixelTrigger, ASR: 79.64989040716993
+[2026/07/22 19:12:07] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:12:32] - [INFO] Test trigger types wanetTrigger, ASR: 82.49453019156759
+[2026/07/22 19:12:56] - [INFO] Test trigger types trojanTrigger, ASR: 93.4354490284325
+[2026/07/22 19:13:21] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 19:13:46] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:14:10] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:14:35] - [INFO] Test trigger types smoothTrigger, ASR: 86.87089697172135
+[2026/07/22 19:15:00] - [INFO] Test trigger types dynamicTrigger, ASR: 2.1881838168304912
+[2026/07/22 19:15:24] - [INFO] Test trigger types nashTrigger, ASR: 92.12253881074668
+[2026/07/22 19:15:24] - [INFO] LR: 0.1 	 Time: 315.57
+[2026/07/22 19:15:25] - ====================Training Epoch 20====================
+[2026/07/22 19:16:33] - [INFO] Test Clean CA: 86.58
+[2026/07/22 19:16:58] - [INFO] Test trigger types onePixelTrigger, ASR: 90.37199093006893
+[2026/07/22 19:17:23] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:17:47] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 19:18:12] - [INFO] Test trigger types trojanTrigger, ASR: 98.90590809628009
+[2026/07/22 19:18:36] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:19:01] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:19:25] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:19:50] - [INFO] Test trigger types smoothTrigger, ASR: 90.15317261610302
+[2026/07/22 19:20:15] - [INFO] Test trigger types dynamicTrigger, ASR: 3.501094101294386
+[2026/07/22 19:20:40] - [INFO] Test trigger types nashTrigger, ASR: 98.68709055026198
+[2026/07/22 19:20:40] - [INFO] LR: 0.1 	 Time: 315.18
+[2026/07/22 19:20:40] - ====================Training Epoch 21====================
+[2026/07/22 19:21:49] - [INFO] Test Clean CA: 87.3
+[2026/07/22 19:22:14] - [INFO] Test trigger types onePixelTrigger, ASR: 88.84026226486105
+[2026/07/22 19:22:39] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:23:04] - [INFO] Test trigger types wanetTrigger, ASR: 92.12253881074668
+[2026/07/22 19:23:28] - [INFO] Test trigger types trojanTrigger, ASR: 94.74835854494859
+[2026/07/22 19:23:53] - [INFO] Test trigger types blendTrigger, ASR: 99.56236323851203
+[2026/07/22 19:24:18] - [INFO] Test trigger types signalTrigger, ASR: 97.1553618850541
+[2026/07/22 19:24:43] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:25:08] - [INFO] Test trigger types smoothTrigger, ASR: 72.6477024236967
+[2026/07/22 19:25:33] - [INFO] Test trigger types dynamicTrigger, ASR: 2.8446389653228827
+[2026/07/22 19:25:57] - [INFO] Test trigger types nashTrigger, ASR: 91.02844652305286
+[2026/07/22 19:25:57] - [INFO] LR: 0.1 	 Time: 317.32
+[2026/07/22 19:25:57] - ====================Training Epoch 22====================
+[2026/07/22 19:27:06] - [INFO] Test Clean CA: 86.76
+[2026/07/22 19:27:31] - [INFO] Test trigger types onePixelTrigger, ASR: 85.5579866204794
+[2026/07/22 19:27:55] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:28:20] - [INFO] Test trigger types wanetTrigger, ASR: 92.99781226694454
+[2026/07/22 19:28:44] - [INFO] Test trigger types trojanTrigger, ASR: 89.71553662256287
+[2026/07/22 19:29:09] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:29:33] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 19:29:58] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:30:22] - [INFO] Test trigger types smoothTrigger, ASR: 84.02625847280156
+[2026/07/22 19:30:47] - [INFO] Test trigger types dynamicTrigger, ASR: 1.9693654360865085
+[2026/07/22 19:31:12] - [INFO] Test trigger types nashTrigger, ASR: 88.40262633809897
+[2026/07/22 19:31:12] - [INFO] LR: 0.1 	 Time: 314.38
+[2026/07/22 19:31:12] - ====================Training Epoch 23====================
+[2026/07/22 19:32:20] - [INFO] Test Clean CA: 87.48
+[2026/07/22 19:32:45] - [INFO] Test trigger types onePixelTrigger, ASR: 91.90371959527681
+[2026/07/22 19:33:10] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:33:34] - [INFO] Test trigger types wanetTrigger, ASR: 87.30853366643125
+[2026/07/22 19:33:59] - [INFO] Test trigger types trojanTrigger, ASR: 94.7483593128964
+[2026/07/22 19:34:24] - [INFO] Test trigger types blendTrigger, ASR: 98.46827133479212
+[2026/07/22 19:34:48] - [INFO] Test trigger types signalTrigger, ASR: 99.56236323851203
+[2026/07/22 19:35:13] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:35:37] - [INFO] Test trigger types smoothTrigger, ASR: 92.34135642354285
+[2026/07/22 19:36:02] - [INFO] Test trigger types dynamicTrigger, ASR: 2.407002200704696
+[2026/07/22 19:36:26] - [INFO] Test trigger types nashTrigger, ASR: 75.27352292584642
+[2026/07/22 19:36:26] - [INFO] LR: 0.1 	 Time: 314.81
+[2026/07/22 19:36:27] - ====================Training Epoch 24====================
+[2026/07/22 19:37:35] - [INFO] Test Clean CA: 85.64
+[2026/07/22 19:38:00] - [INFO] Test trigger types onePixelTrigger, ASR: 93.21662987974071
+[2026/07/22 19:38:29] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:38:53] - [INFO] Test trigger types wanetTrigger, ASR: 99.12472647702407
+[2026/07/22 19:39:18] - [INFO] Test trigger types trojanTrigger, ASR: 98.90590809628009
+[2026/07/22 19:39:43] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:40:07] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:40:31] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:40:54] - [INFO] Test trigger types smoothTrigger, ASR: 91.46608290056692
+[2026/07/22 19:41:17] - [INFO] Test trigger types dynamicTrigger, ASR: 3.7199124914290347
+[2026/07/22 19:41:41] - [INFO] Test trigger types nashTrigger, ASR: 84.0262587899974
+[2026/07/22 19:41:41] - [INFO] LR: 0.1 	 Time: 314.17
+[2026/07/22 19:41:41] - ====================Training Epoch 25====================
+[2026/07/22 19:42:47] - [INFO] Test Clean CA: 88.36
+[2026/07/22 19:43:10] - [INFO] Test trigger types onePixelTrigger, ASR: 91.68490121453283
+[2026/07/22 19:43:33] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:43:57] - [INFO] Test trigger types wanetTrigger, ASR: 96.28008836207817
+[2026/07/22 19:44:24] - [INFO] Test trigger types trojanTrigger, ASR: 97.1553611171063
+[2026/07/22 19:44:51] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:45:17] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:45:40] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:46:03] - [INFO] Test trigger types smoothTrigger, ASR: 65.86433275418939
+[2026/07/22 19:46:28] - [INFO] Test trigger types dynamicTrigger, ASR: 1.9693654392167306
+[2026/07/22 19:46:54] - [INFO] Test trigger types nashTrigger, ASR: 92.34135719149066
+[2026/07/22 19:46:54] - [INFO] LR: 0.1 	 Time: 313.37
+[2026/07/22 19:46:54] - ====================Training Epoch 26====================
+[2026/07/22 19:48:05] - [INFO] Test Clean CA: 87.26
+[2026/07/22 19:48:31] - [INFO] Test trigger types onePixelTrigger, ASR: 94.74835854494859
+[2026/07/22 19:48:59] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:49:24] - [INFO] Test trigger types wanetTrigger, ASR: 98.90590809628009
+[2026/07/22 19:49:49] - [INFO] Test trigger types trojanTrigger, ASR: 98.6870897155361
+[2026/07/22 19:50:14] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:50:38] - [INFO] Test trigger types signalTrigger, ASR: 99.12472647702407
+[2026/07/22 19:51:03] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:51:28] - [INFO] Test trigger types smoothTrigger, ASR: 89.05908116313509
+[2026/07/22 19:51:53] - [INFO] Test trigger types dynamicTrigger, ASR: 1.9693654392167306
+[2026/07/22 19:52:17] - [INFO] Test trigger types nashTrigger, ASR: 98.24945340480012
+[2026/07/22 19:52:17] - [INFO] LR: 0.1 	 Time: 323.15
+[2026/07/22 19:52:17] - ====================Training Epoch 27====================
+[2026/07/22 19:53:27] - [INFO] Test Clean CA: 86.8
+[2026/07/22 19:53:52] - [INFO] Test trigger types onePixelTrigger, ASR: 90.8096276915569
+[2026/07/22 19:54:17] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:54:42] - [INFO] Test trigger types wanetTrigger, ASR: 97.1553618850541
+[2026/07/22 19:55:06] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181702728605
+[2026/07/22 19:55:31] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 19:55:55] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 19:56:20] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 19:56:44] - [INFO] Test trigger types smoothTrigger, ASR: 90.37199183157288
+[2026/07/22 19:57:09] - [INFO] Test trigger types dynamicTrigger, ASR: 2.188183819960713
+[2026/07/22 19:57:34] - [INFO] Test trigger types nashTrigger, ASR: 86.65207890817321
+[2026/07/22 19:57:34] - [INFO] LR: 0.1 	 Time: 316.04
+[2026/07/22 19:57:34] - ====================Training Epoch 28====================
+[2026/07/22 19:58:42] - [INFO] Test Clean CA: 86.74
+[2026/07/22 19:59:07] - [INFO] Test trigger types onePixelTrigger, ASR: 89.93435416858097
+[2026/07/22 19:59:32] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 19:59:56] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 20:00:21] - [INFO] Test trigger types trojanTrigger, ASR: 96.71772512356614
+[2026/07/22 20:00:45] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 20:01:10] - [INFO] Test trigger types signalTrigger, ASR: 99.34354485776805
+[2026/07/22 20:01:34] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:01:59] - [INFO] Test trigger types smoothTrigger, ASR: 52.51641157054275
+[2026/07/22 20:02:24] - [INFO] Test trigger types dynamicTrigger, ASR: 1.7505470553425262
+[2026/07/22 20:02:48] - [INFO] Test trigger types nashTrigger, ASR: 94.74835899570056
+[2026/07/22 20:02:48] - [INFO] LR: 0.1 	 Time: 314.74
+[2026/07/22 20:02:48] - ====================Training Epoch 29====================
+[2026/07/22 20:03:57] - [INFO] Test Clean CA: 89.0
+[2026/07/22 20:04:22] - [INFO] Test trigger types onePixelTrigger, ASR: 82.9321660515516
+[2026/07/22 20:04:46] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:05:11] - [INFO] Test trigger types wanetTrigger, ASR: 80.9628007584119
+[2026/07/22 20:05:35] - [INFO] Test trigger types trojanTrigger, ASR: 91.90372043000269
+[2026/07/22 20:06:00] - [INFO] Test trigger types blendTrigger, ASR: 99.12472647702407
+[2026/07/22 20:06:24] - [INFO] Test trigger types signalTrigger, ASR: 97.81181619256017
+[2026/07/22 20:06:49] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:07:14] - [INFO] Test trigger types smoothTrigger, ASR: 82.49453025834566
+[2026/07/22 20:07:38] - [INFO] Test trigger types dynamicTrigger, ASR: 1.3129102969847832
+[2026/07/22 20:08:03] - [INFO] Test trigger types nashTrigger, ASR: 92.56017473750876
+[2026/07/22 20:08:03] - [INFO] LR: 0.1 	 Time: 314.10
+[2026/07/22 20:08:03] - ====================Training Epoch 30====================
+[2026/07/22 20:09:11] - [INFO] Test Clean CA: 87.38
+[2026/07/22 20:09:36] - [INFO] Test trigger types onePixelTrigger, ASR: 92.99781149899673
+[2026/07/22 20:10:00] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:10:25] - [INFO] Test trigger types wanetTrigger, ASR: 99.34354485776805
+[2026/07/22 20:10:49] - [INFO] Test trigger types trojanTrigger, ASR: 99.34354485776805
+[2026/07/22 20:11:14] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 20:11:39] - [INFO] Test trigger types signalTrigger, ASR: 99.34354485776805
+[2026/07/22 20:12:03] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:12:28] - [INFO] Test trigger types smoothTrigger, ASR: 75.71115943691663
+[2026/07/22 20:12:52] - [INFO] Test trigger types dynamicTrigger, ASR: 2.625820581448678
+[2026/07/22 20:13:17] - [INFO] Test trigger types nashTrigger, ASR: 91.02844607230088
+[2026/07/22 20:13:17] - [INFO] LR: 0.1 	 Time: 314.19
+[2026/07/22 20:13:17] - ====================Training Epoch 31====================
+[2026/07/22 20:14:26] - [INFO] Test Clean CA: 86.38
+[2026/07/22 20:14:50] - [INFO] Test trigger types onePixelTrigger, ASR: 89.27789902634902
+[2026/07/22 20:15:15] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:15:39] - [INFO] Test trigger types wanetTrigger, ASR: 91.90372036322462
+[2026/07/22 20:16:04] - [INFO] Test trigger types trojanTrigger, ASR: 90.80962845950471
+[2026/07/22 20:16:27] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 20:16:51] - [INFO] Test trigger types signalTrigger, ASR: 97.3741794310722
+[2026/07/22 20:17:14] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:17:38] - [INFO] Test trigger types smoothTrigger, ASR: 96.28008759413036
+[2026/07/22 20:18:01] - [INFO] Test trigger types dynamicTrigger, ASR: 2.6258205845789
+[2026/07/22 20:18:24] - [INFO] Test trigger types nashTrigger, ASR: 96.93654350431012
+[2026/07/22 20:18:24] - [INFO] LR: 0.1 	 Time: 307.51
+[2026/07/22 20:18:24] - ====================Training Epoch 32====================
+[2026/07/22 20:19:30] - [INFO] Test Clean CA: 87.46
+[2026/07/22 20:19:54] - [INFO] Test trigger types onePixelTrigger, ASR: 87.08971566966117
+[2026/07/22 20:20:18] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:20:42] - [INFO] Test trigger types wanetTrigger, ASR: 89.05908064560504
+[2026/07/22 20:21:05] - [INFO] Test trigger types trojanTrigger, ASR: 93.43544864445859
+[2026/07/22 20:21:29] - [INFO] Test trigger types blendTrigger, ASR: 92.56017473750876
+[2026/07/22 20:21:53] - [INFO] Test trigger types signalTrigger, ASR: 99.56236323851203
+[2026/07/22 20:22:19] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:22:44] - [INFO] Test trigger types smoothTrigger, ASR: 65.6455147574193
+[2026/07/22 20:23:08] - [INFO] Test trigger types dynamicTrigger, ASR: 1.750547049082082
+[2026/07/22 20:23:32] - [INFO] Test trigger types nashTrigger, ASR: 95.40481445512835
+[2026/07/22 20:23:32] - [INFO] LR: 0.1 	 Time: 307.18
+[2026/07/22 20:23:32] - ====================Training Epoch 33====================
+[2026/07/22 20:24:39] - [INFO] Test Clean CA: 86.04
+[2026/07/22 20:25:04] - [INFO] Test trigger types onePixelTrigger, ASR: 95.8424508326424
+[2026/07/22 20:25:29] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:25:54] - [INFO] Test trigger types wanetTrigger, ASR: 94.09190417066445
+[2026/07/22 20:26:18] - [INFO] Test trigger types trojanTrigger, ASR: 99.12472647702407
+[2026/07/22 20:26:43] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 20:27:06] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 20:27:29] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:27:52] - [INFO] Test trigger types smoothTrigger, ASR: 96.28008797810428
+[2026/07/22 20:28:15] - [INFO] Test trigger types dynamicTrigger, ASR: 3.7199124914290347
+[2026/07/22 20:28:38] - [INFO] Test trigger types nashTrigger, ASR: 87.96498964338907
+[2026/07/22 20:28:38] - [INFO] LR: 0.1 	 Time: 306.00
+[2026/07/22 20:28:38] - ====================Training Epoch 34====================
+[2026/07/22 20:29:42] - [INFO] Test Clean CA: 84.98
+[2026/07/22 20:30:05] - [INFO] Test trigger types onePixelTrigger, ASR: 89.71553578783698
+[2026/07/22 20:30:28] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:30:52] - [INFO] Test trigger types wanetTrigger, ASR: 97.81181702728605
+[2026/07/22 20:31:16] - [INFO] Test trigger types trojanTrigger, ASR: 95.18599607438436
+[2026/07/22 20:31:41] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 20:32:06] - [INFO] Test trigger types signalTrigger, ASR: 99.12472647702407
+[2026/07/22 20:32:31] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:32:56] - [INFO] Test trigger types smoothTrigger, ASR: 89.05908154710899
+[2026/07/22 20:33:19] - [INFO] Test trigger types dynamicTrigger, ASR: 1.9693654423469527
+[2026/07/22 20:33:43] - [INFO] Test trigger types nashTrigger, ASR: 94.96717769364038
+[2026/07/22 20:33:43] - [INFO] LR: 0.1 	 Time: 305.06
+[2026/07/22 20:33:43] - ====================Training Epoch 35====================
+[2026/07/22 20:34:51] - [INFO] Test Clean CA: 88.26
+[2026/07/22 20:35:16] - [INFO] Test trigger types onePixelTrigger, ASR: 89.71553662256287
+[2026/07/22 20:35:40] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:36:03] - [INFO] Test trigger types wanetTrigger, ASR: 96.93654350431012
+[2026/07/22 20:36:26] - [INFO] Test trigger types trojanTrigger, ASR: 95.40481445512835
+[2026/07/22 20:36:50] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 20:37:13] - [INFO] Test trigger types signalTrigger, ASR: 98.468272169518
+[2026/07/22 20:37:36] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:38:01] - [INFO] Test trigger types smoothTrigger, ASR: 97.59299749462036
+[2026/07/22 20:38:24] - [INFO] Test trigger types dynamicTrigger, ASR: 2.1881838168304912
+[2026/07/22 20:38:47] - [INFO] Test trigger types nashTrigger, ASR: 84.90153192899942
+[2026/07/22 20:38:47] - [INFO] LR: 0.1 	 Time: 304.23
+[2026/07/22 20:38:47] - ====================Training Epoch 36====================
+[2026/07/22 20:39:53] - [INFO] Test Clean CA: 87.76
+[2026/07/22 20:40:16] - [INFO] Test trigger types onePixelTrigger, ASR: 95.40481407115443
+[2026/07/22 20:40:39] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:41:02] - [INFO] Test trigger types wanetTrigger, ASR: 99.78118161925602
+[2026/07/22 20:41:24] - [INFO] Test trigger types trojanTrigger, ASR: 98.90590809628009
+[2026/07/22 20:41:47] - [INFO] Test trigger types blendTrigger, ASR: 99.56236323851203
+[2026/07/22 20:42:10] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 20:42:33] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:42:56] - [INFO] Test trigger types smoothTrigger, ASR: 95.18599530643655
+[2026/07/22 20:43:19] - [INFO] Test trigger types dynamicTrigger, ASR: 1.750547058472748
+[2026/07/22 20:43:42] - [INFO] Test trigger types nashTrigger, ASR: 96.93654266958424
+[2026/07/22 20:43:42] - [INFO] LR: 0.1 	 Time: 295.09
+[2026/07/22 20:43:42] - ====================Training Epoch 37====================
+[2026/07/22 20:44:48] - [INFO] Test Clean CA: 88.38
+[2026/07/22 20:45:11] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 20:45:34] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:45:57] - [INFO] Test trigger types wanetTrigger, ASR: 96.28008836207817
+[2026/07/22 20:46:20] - [INFO] Test trigger types trojanTrigger, ASR: 98.24945295404814
+[2026/07/22 20:46:43] - [INFO] Test trigger types blendTrigger, ASR: 99.34354485776805
+[2026/07/22 20:47:06] - [INFO] Test trigger types signalTrigger, ASR: 99.12472647702407
+[2026/07/22 20:47:29] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:47:52] - [INFO] Test trigger types smoothTrigger, ASR: 86.65207904172935
+[2026/07/22 20:48:15] - [INFO] Test trigger types dynamicTrigger, ASR: 1.5317286745985437
+[2026/07/22 20:48:37] - [INFO] Test trigger types nashTrigger, ASR: 95.84245121661631
+[2026/07/22 20:48:37] - [INFO] LR: 0.1 	 Time: 295.00
+[2026/07/22 20:48:38] - ====================Training Epoch 38====================
+[2026/07/22 20:49:43] - [INFO] Test Clean CA: 87.14
+[2026/07/22 20:50:06] - [INFO] Test trigger types onePixelTrigger, ASR: 89.93435416858097
+[2026/07/22 20:50:29] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:50:52] - [INFO] Test trigger types wanetTrigger, ASR: 90.80962852628278
+[2026/07/22 20:51:15] - [INFO] Test trigger types trojanTrigger, ASR: 95.84245121661631
+[2026/07/22 20:51:38] - [INFO] Test trigger types blendTrigger, ASR: 99.56236407323792
+[2026/07/22 20:52:01] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 20:52:23] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:52:46] - [INFO] Test trigger types smoothTrigger, ASR: 97.37417988182419
+[2026/07/22 20:53:09] - [INFO] Test trigger types dynamicTrigger, ASR: 1.312910290724339
+[2026/07/22 20:53:32] - [INFO] Test trigger types nashTrigger, ASR: 88.84026233163912
+[2026/07/22 20:53:32] - [INFO] LR: 0.1 	 Time: 294.85
+[2026/07/22 20:53:32] - ====================Training Epoch 39====================
+[2026/07/22 20:54:38] - [INFO] Test Clean CA: 87.76
+[2026/07/22 20:55:01] - [INFO] Test trigger types onePixelTrigger, ASR: 86.21444214668524
+[2026/07/22 20:55:24] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 20:55:47] - [INFO] Test trigger types wanetTrigger, ASR: 91.90372043000269
+[2026/07/22 20:56:10] - [INFO] Test trigger types trojanTrigger, ASR: 84.90153231297332
+[2026/07/22 20:56:34] - [INFO] Test trigger types blendTrigger, ASR: 99.34354485776805
+[2026/07/22 20:56:57] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 20:57:20] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 20:57:43] - [INFO] Test trigger types smoothTrigger, ASR: 26.25820568510427
+[2026/07/22 20:58:06] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919131105786
+[2026/07/22 20:58:29] - [INFO] Test trigger types nashTrigger, ASR: 83.5886220952875
+[2026/07/22 20:58:29] - [INFO] LR: 0.1 	 Time: 296.25
+[2026/07/22 20:58:29] - ====================Training Epoch 40====================
+[2026/07/22 20:59:34] - [INFO] Test Clean CA: 88.14
+[2026/07/22 20:59:57] - [INFO] Test trigger types onePixelTrigger, ASR: 91.68490121453283
+[2026/07/22 21:00:20] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:00:43] - [INFO] Test trigger types wanetTrigger, ASR: 94.52954093215241
+[2026/07/22 21:01:06] - [INFO] Test trigger types trojanTrigger, ASR: 90.59080931081292
+[2026/07/22 21:01:29] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:01:52] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:02:15] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:02:38] - [INFO] Test trigger types smoothTrigger, ASR: 56.01750530351434
+[2026/07/22 21:03:01] - [INFO] Test trigger types dynamicTrigger, ASR: 1.7505470553425262
+[2026/07/22 21:03:24] - [INFO] Test trigger types nashTrigger, ASR: 92.12253842677278
+[2026/07/22 21:03:24] - [INFO] LR: 0.1 	 Time: 295.45
+[2026/07/22 21:03:24] - ====================Training Epoch 41====================
+[2026/07/22 21:04:30] - [INFO] Test Clean CA: 92.3
+[2026/07/22 21:04:53] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 21:05:16] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:05:39] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 21:06:02] - [INFO] Test trigger types trojanTrigger, ASR: 97.37418026579809
+[2026/07/22 21:06:26] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:06:49] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:07:13] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:07:36] - [INFO] Test trigger types smoothTrigger, ASR: 94.5295401642046
+[2026/07/22 21:07:59] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919162408007
+[2026/07/22 21:08:22] - [INFO] Test trigger types nashTrigger, ASR: 96.28008836207817
+[2026/07/22 21:08:22] - [INFO] LR: 0.010000000000000002 	 Time: 297.70
+[2026/07/22 21:08:22] - ====================Training Epoch 42====================
+[2026/07/22 21:09:27] - [INFO] Test Clean CA: 92.2
+[2026/07/22 21:09:50] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 21:10:13] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:10:36] - [INFO] Test trigger types wanetTrigger, ASR: 99.56236323851203
+[2026/07/22 21:10:59] - [INFO] Test trigger types trojanTrigger, ASR: 97.1553618850541
+[2026/07/22 21:11:22] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:11:45] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:12:08] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:12:31] - [INFO] Test trigger types smoothTrigger, ASR: 91.68490166528481
+[2026/07/22 21:12:54] - [INFO] Test trigger types dynamicTrigger, ASR: 0.6564551516226136
+[2026/07/22 21:13:17] - [INFO] Test trigger types nashTrigger, ASR: 95.8424508326424
+[2026/07/22 21:13:17] - [INFO] LR: 0.010000000000000002 	 Time: 295.07
+[2026/07/22 21:13:17] - ====================Training Epoch 43====================
+[2026/07/22 21:14:23] - [INFO] Test Clean CA: 92.38
+[2026/07/22 21:14:46] - [INFO] Test trigger types onePixelTrigger, ASR: 94.31072178346062
+[2026/07/22 21:15:09] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:15:32] - [INFO] Test trigger types wanetTrigger, ASR: 99.12472647702407
+[2026/07/22 21:15:55] - [INFO] Test trigger types trojanTrigger, ASR: 98.03063540803004
+[2026/07/22 21:16:18] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:16:41] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:17:04] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:17:27] - [INFO] Test trigger types smoothTrigger, ASR: 93.87308502197266
+[2026/07/22 21:17:50] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:18:13] - [INFO] Test trigger types nashTrigger, ASR: 94.09190378669054
+[2026/07/22 21:18:13] - [INFO] LR: 0.010000000000000002 	 Time: 296.15
+[2026/07/22 21:18:14] - ====================Training Epoch 44====================
+[2026/07/22 21:19:19] - [INFO] Test Clean CA: 92.26
+[2026/07/22 21:19:42] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 21:20:05] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:20:28] - [INFO] Test trigger types wanetTrigger, ASR: 99.34354485776805
+[2026/07/22 21:20:51] - [INFO] Test trigger types trojanTrigger, ASR: 98.46827133479212
+[2026/07/22 21:21:14] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:21:37] - [INFO] Test trigger types signalTrigger, ASR: 99.56236323851203
+[2026/07/22 21:22:00] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:22:23] - [INFO] Test trigger types smoothTrigger, ASR: 90.37199183157288
+[2026/07/22 21:22:46] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919162408007
+[2026/07/22 21:23:09] - [INFO] Test trigger types nashTrigger, ASR: 96.28008836207817
+[2026/07/22 21:23:09] - [INFO] LR: 0.010000000000000002 	 Time: 295.23
+[2026/07/22 21:23:09] - ====================Training Epoch 45====================
+[2026/07/22 21:24:14] - [INFO] Test Clean CA: 92.4
+[2026/07/22 21:24:37] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 21:25:00] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:25:23] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 21:25:47] - [INFO] Test trigger types trojanTrigger, ASR: 97.59299864654207
+[2026/07/22 21:26:10] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 21:26:33] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 21:26:56] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:27:18] - [INFO] Test trigger types smoothTrigger, ASR: 93.21663033049268
+[2026/07/22 21:27:41] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:28:04] - [INFO] Test trigger types nashTrigger, ASR: 94.96717730966647
+[2026/07/22 21:28:04] - [INFO] LR: 0.010000000000000002 	 Time: 295.55
+[2026/07/22 21:28:04] - ====================Training Epoch 46====================
+[2026/07/22 21:29:12] - [INFO] Test Clean CA: 92.5
+[2026/07/22 21:29:37] - [INFO] Test trigger types onePixelTrigger, ASR: 93.87308502197266
+[2026/07/22 21:30:01] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:30:25] - [INFO] Test trigger types wanetTrigger, ASR: 98.90590809628009
+[2026/07/22 21:30:50] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181702728605
+[2026/07/22 21:31:14] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:31:38] - [INFO] Test trigger types signalTrigger, ASR: 99.34354485776805
+[2026/07/22 21:32:02] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:32:27] - [INFO] Test trigger types smoothTrigger, ASR: 91.90371966205488
+[2026/07/22 21:32:51] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:33:15] - [INFO] Test trigger types nashTrigger, ASR: 95.18599569041045
+[2026/07/22 21:33:15] - [INFO] LR: 0.010000000000000002 	 Time: 310.92
+[2026/07/22 21:33:15] - ====================Training Epoch 47====================
+[2026/07/22 21:34:22] - [INFO] Test Clean CA: 92.6
+[2026/07/22 21:34:46] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 21:35:09] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:35:32] - [INFO] Test trigger types wanetTrigger, ASR: 99.34354485776805
+[2026/07/22 21:35:55] - [INFO] Test trigger types trojanTrigger, ASR: 98.24945295404814
+[2026/07/22 21:36:18] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:36:41] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:37:04] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:37:27] - [INFO] Test trigger types smoothTrigger, ASR: 92.56017518826073
+[2026/07/22 21:37:50] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:38:13] - [INFO] Test trigger types nashTrigger, ASR: 95.18599607438436
+[2026/07/22 21:38:13] - [INFO] LR: 0.010000000000000002 	 Time: 298.00
+[2026/07/22 21:38:14] - ====================Training Epoch 48====================
+[2026/07/22 21:39:19] - [INFO] Test Clean CA: 92.28
+[2026/07/22 21:39:42] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 21:40:05] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:40:28] - [INFO] Test trigger types wanetTrigger, ASR: 99.12472647702407
+[2026/07/22 21:40:51] - [INFO] Test trigger types trojanTrigger, ASR: 98.24945378877402
+[2026/07/22 21:41:14] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:41:37] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:42:00] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:42:23] - [INFO] Test trigger types smoothTrigger, ASR: 93.87308585669854
+[2026/07/22 21:42:46] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:43:09] - [INFO] Test trigger types nashTrigger, ASR: 95.18599607438436
+[2026/07/22 21:43:09] - [INFO] LR: 0.010000000000000002 	 Time: 295.93
+[2026/07/22 21:43:10] - ====================Training Epoch 49====================
+[2026/07/22 21:44:16] - [INFO] Test Clean CA: 92.46
+[2026/07/22 21:44:39] - [INFO] Test trigger types onePixelTrigger, ASR: 94.74835854494859
+[2026/07/22 21:45:02] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:45:25] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 21:45:48] - [INFO] Test trigger types trojanTrigger, ASR: 98.24945378877402
+[2026/07/22 21:46:11] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 21:46:34] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 21:46:57] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:47:20] - [INFO] Test trigger types smoothTrigger, ASR: 93.21663071446659
+[2026/07/22 21:47:43] - [INFO] Test trigger types dynamicTrigger, ASR: 1.3129102969847832
+[2026/07/22 21:48:06] - [INFO] Test trigger types nashTrigger, ASR: 94.7483593128964
+[2026/07/22 21:48:06] - [INFO] LR: 0.010000000000000002 	 Time: 296.81
+[2026/07/22 21:48:06] - ====================Training Epoch 50====================
+[2026/07/22 21:49:12] - [INFO] Test Clean CA: 92.4
+[2026/07/22 21:49:35] - [INFO] Test trigger types onePixelTrigger, ASR: 93.87308502197266
+[2026/07/22 21:49:58] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:50:21] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 21:50:44] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181702728605
+[2026/07/22 21:51:07] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 21:51:30] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 21:51:53] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:52:16] - [INFO] Test trigger types smoothTrigger, ASR: 90.80962859306085
+[2026/07/22 21:52:39] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735323665961
+[2026/07/22 21:53:02] - [INFO] Test trigger types nashTrigger, ASR: 92.99781226694454
+[2026/07/22 21:53:02] - [INFO] LR: 0.010000000000000002 	 Time: 295.94
+[2026/07/22 21:53:02] - [INFO] Save model weight epoch 50
+[2026/07/22 21:53:03] - ====================Training Epoch 51====================
+[2026/07/22 21:54:09] - [INFO] Test Clean CA: 92.48
+[2026/07/22 21:54:32] - [INFO] Test trigger types onePixelTrigger, ASR: 93.43544826048469
+[2026/07/22 21:54:56] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 21:55:21] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 21:55:45] - [INFO] Test trigger types trojanTrigger, ASR: 98.03063457330416
+[2026/07/22 21:56:10] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 21:56:34] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 21:56:59] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 21:57:23] - [INFO] Test trigger types smoothTrigger, ASR: 93.21663033049268
+[2026/07/22 21:57:47] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919131105786
+[2026/07/22 21:58:11] - [INFO] Test trigger types nashTrigger, ASR: 93.65426740917648
+[2026/07/22 21:58:11] - [INFO] LR: 0.010000000000000002 	 Time: 308.20
+[2026/07/22 21:58:11] - ====================Training Epoch 52====================
+[2026/07/22 21:59:17] - [INFO] Test Clean CA: 92.38
+[2026/07/22 21:59:40] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 22:00:03] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:00:26] - [INFO] Test trigger types wanetTrigger, ASR: 98.90590809628009
+[2026/07/22 22:00:49] - [INFO] Test trigger types trojanTrigger, ASR: 98.46827133479212
+[2026/07/22 22:01:12] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 22:01:35] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:01:58] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:02:21] - [INFO] Test trigger types smoothTrigger, ASR: 93.21663033049268
+[2026/07/22 22:02:44] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919131105786
+[2026/07/22 22:03:07] - [INFO] Test trigger types nashTrigger, ASR: 95.40481483910224
+[2026/07/22 22:03:07] - [INFO] LR: 0.010000000000000002 	 Time: 296.18
+[2026/07/22 22:03:07] - ====================Training Epoch 53====================
+[2026/07/22 22:04:13] - [INFO] Test Clean CA: 92.12
+[2026/07/22 22:04:36] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 22:04:58] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:05:22] - [INFO] Test trigger types wanetTrigger, ASR: 99.12472647702407
+[2026/07/22 22:05:44] - [INFO] Test trigger types trojanTrigger, ASR: 98.24945378877402
+[2026/07/22 22:06:08] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:06:31] - [INFO] Test trigger types signalTrigger, ASR: 99.34354485776805
+[2026/07/22 22:06:53] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:07:17] - [INFO] Test trigger types smoothTrigger, ASR: 89.49671830859695
+[2026/07/22 22:07:39] - [INFO] Test trigger types dynamicTrigger, ASR: 0.875273529236374
+[2026/07/22 22:08:02] - [INFO] Test trigger types nashTrigger, ASR: 93.4354490284325
+[2026/07/22 22:08:02] - [INFO] LR: 0.010000000000000002 	 Time: 295.37
+[2026/07/22 22:08:03] - ====================Training Epoch 54====================
+[2026/07/22 22:09:08] - [INFO] Test Clean CA: 92.04
+[2026/07/22 22:09:31] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 22:09:54] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:10:17] - [INFO] Test trigger types wanetTrigger, ASR: 99.12472647702407
+[2026/07/22 22:10:40] - [INFO] Test trigger types trojanTrigger, ASR: 98.03063457330416
+[2026/07/22 22:11:03] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:11:26] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 22:11:49] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:12:12] - [INFO] Test trigger types smoothTrigger, ASR: 93.21662994651878
+[2026/07/22 22:12:35] - [INFO] Test trigger types dynamicTrigger, ASR: 1.3129102938545612
+[2026/07/22 22:12:58] - [INFO] Test trigger types nashTrigger, ASR: 94.7483593128964
+[2026/07/22 22:12:58] - [INFO] LR: 0.010000000000000002 	 Time: 295.82
+[2026/07/22 22:12:58] - ====================Training Epoch 55====================
+[2026/07/22 22:14:04] - [INFO] Test Clean CA: 92.16
+[2026/07/22 22:14:27] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 22:14:50] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:15:13] - [INFO] Test trigger types wanetTrigger, ASR: 98.24945295404814
+[2026/07/22 22:15:36] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181702728605
+[2026/07/22 22:15:59] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 22:16:22] - [INFO] Test trigger types signalTrigger, ASR: 99.56236323851203
+[2026/07/22 22:16:45] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:17:08] - [INFO] Test trigger types smoothTrigger, ASR: 92.12253804279887
+[2026/07/22 22:17:31] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919099803565
+[2026/07/22 22:17:54] - [INFO] Test trigger types nashTrigger, ASR: 96.28008836207817
+[2026/07/22 22:17:54] - [INFO] LR: 0.010000000000000002 	 Time: 295.59
+[2026/07/22 22:17:54] - [INFO] Save model weight epoch 55
+[2026/07/22 22:17:54] - ====================Training Epoch 56====================
+[2026/07/22 22:19:00] - [INFO] Test Clean CA: 92.36
+[2026/07/22 22:19:23] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 22:19:46] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:20:10] - [INFO] Test trigger types wanetTrigger, ASR: 98.24945295404814
+[2026/07/22 22:20:33] - [INFO] Test trigger types trojanTrigger, ASR: 97.37417988182419
+[2026/07/22 22:20:56] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:21:19] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:21:42] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:22:05] - [INFO] Test trigger types smoothTrigger, ASR: 93.43544832726276
+[2026/07/22 22:22:27] - [INFO] Test trigger types dynamicTrigger, ASR: 0.875273529236374
+[2026/07/22 22:22:51] - [INFO] Test trigger types nashTrigger, ASR: 94.7483593128964
+[2026/07/22 22:22:51] - [INFO] LR: 0.010000000000000002 	 Time: 296.32
+[2026/07/22 22:22:51] - ====================Training Epoch 57====================
+[2026/07/22 22:23:56] - [INFO] Test Clean CA: 92.22
+[2026/07/22 22:24:19] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 22:24:42] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:25:05] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 22:25:28] - [INFO] Test trigger types trojanTrigger, ASR: 97.37417949785028
+[2026/07/22 22:25:51] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:26:14] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:26:38] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:27:01] - [INFO] Test trigger types smoothTrigger, ASR: 87.74617049469728
+[2026/07/22 22:27:24] - [INFO] Test trigger types dynamicTrigger, ASR: 1.750547058472748
+[2026/07/22 22:27:47] - [INFO] Test trigger types nashTrigger, ASR: 95.18599645835826
+[2026/07/22 22:27:47] - [INFO] LR: 0.010000000000000002 	 Time: 295.89
+[2026/07/22 22:27:47] - ====================Training Epoch 58====================
+[2026/07/22 22:28:52] - [INFO] Test Clean CA: 92.08
+[2026/07/22 22:29:15] - [INFO] Test trigger types onePixelTrigger, ASR: 93.43544826048469
+[2026/07/22 22:29:38] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:30:00] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 22:30:23] - [INFO] Test trigger types trojanTrigger, ASR: 96.49890597487435
+[2026/07/22 22:30:46] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:31:09] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:31:32] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:31:55] - [INFO] Test trigger types smoothTrigger, ASR: 92.9978115657748
+[2026/07/22 22:32:18] - [INFO] Test trigger types dynamicTrigger, ASR: 1.5317286714683216
+[2026/07/22 22:32:42] - [INFO] Test trigger types nashTrigger, ASR: 95.18599645835826
+[2026/07/22 22:32:42] - [INFO] LR: 0.010000000000000002 	 Time: 294.93
+[2026/07/22 22:32:42] - ====================Training Epoch 59====================
+[2026/07/22 22:33:47] - [INFO] Test Clean CA: 92.06
+[2026/07/22 22:34:10] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 22:34:33] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:34:56] - [INFO] Test trigger types wanetTrigger, ASR: 98.03063457330416
+[2026/07/22 22:35:19] - [INFO] Test trigger types trojanTrigger, ASR: 97.15536150108021
+[2026/07/22 22:35:42] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 22:36:05] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:36:28] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:36:51] - [INFO] Test trigger types smoothTrigger, ASR: 93.43544871123666
+[2026/07/22 22:37:13] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919099803565
+[2026/07/22 22:37:36] - [INFO] Test trigger types nashTrigger, ASR: 94.09190417066445
+[2026/07/22 22:37:36] - [INFO] LR: 0.010000000000000002 	 Time: 294.62
+[2026/07/22 22:37:36] - ====================Training Epoch 60====================
+[2026/07/22 22:38:41] - [INFO] Test Clean CA: 92.2
+[2026/07/22 22:39:04] - [INFO] Test trigger types onePixelTrigger, ASR: 93.87308502197266
+[2026/07/22 22:39:27] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:39:50] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 22:40:13] - [INFO] Test trigger types trojanTrigger, ASR: 97.1553618850541
+[2026/07/22 22:40:36] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 22:40:59] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:41:22] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:41:46] - [INFO] Test trigger types smoothTrigger, ASR: 90.59080937759099
+[2026/07/22 22:42:09] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919068501345
+[2026/07/22 22:42:33] - [INFO] Test trigger types nashTrigger, ASR: 94.96717807761428
+[2026/07/22 22:42:33] - [INFO] LR: 0.010000000000000002 	 Time: 296.22
+[2026/07/22 22:42:33] - [INFO] Save model weight epoch 60
+[2026/07/22 22:42:33] - ====================Training Epoch 61====================
+[2026/07/22 22:43:38] - [INFO] Test Clean CA: 92.08
+[2026/07/22 22:44:02] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 22:44:25] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:44:48] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 22:45:11] - [INFO] Test trigger types trojanTrigger, ASR: 98.46827133479212
+[2026/07/22 22:45:34] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:45:57] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:46:20] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:46:43] - [INFO] Test trigger types smoothTrigger, ASR: 92.12253804279887
+[2026/07/22 22:47:07] - [INFO] Test trigger types dynamicTrigger, ASR: 1.312910290724339
+[2026/07/22 22:47:30] - [INFO] Test trigger types nashTrigger, ASR: 95.40481483910224
+[2026/07/22 22:47:30] - [INFO] LR: 0.0010000000000000002 	 Time: 296.90
+[2026/07/22 22:47:30] - ====================Training Epoch 62====================
+[2026/07/22 22:48:35] - [INFO] Test Clean CA: 92.36
+[2026/07/22 22:48:59] - [INFO] Test trigger types onePixelTrigger, ASR: 94.31072178346062
+[2026/07/22 22:49:22] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:49:45] - [INFO] Test trigger types wanetTrigger, ASR: 98.6870897155361
+[2026/07/22 22:50:08] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181619256017
+[2026/07/22 22:50:31] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 22:50:54] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 22:51:17] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:51:40] - [INFO] Test trigger types smoothTrigger, ASR: 92.9978115657748
+[2026/07/22 22:52:04] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919099803565
+[2026/07/22 22:52:27] - [INFO] Test trigger types nashTrigger, ASR: 94.52954131612631
+[2026/07/22 22:52:27] - [INFO] LR: 0.0010000000000000002 	 Time: 297.10
+[2026/07/22 22:52:27] - ====================Training Epoch 63====================
+[2026/07/22 22:53:33] - [INFO] Test Clean CA: 92.16
+[2026/07/22 22:53:56] - [INFO] Test trigger types onePixelTrigger, ASR: 93.87308502197266
+[2026/07/22 22:54:19] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:54:42] - [INFO] Test trigger types wanetTrigger, ASR: 98.46827133479212
+[2026/07/22 22:55:05] - [INFO] Test trigger types trojanTrigger, ASR: 97.59299781181619
+[2026/07/22 22:55:28] - [INFO] Test trigger types blendTrigger, ASR: 100.0
+[2026/07/22 22:55:51] - [INFO] Test trigger types signalTrigger, ASR: 100.0
+[2026/07/22 22:56:15] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 22:56:38] - [INFO] Test trigger types smoothTrigger, ASR: 92.34135642354285
+[2026/07/22 22:57:01] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919068501345
+[2026/07/22 22:57:24] - [INFO] Test trigger types nashTrigger, ASR: 94.7483596968703
+[2026/07/22 22:57:24] - [INFO] LR: 0.0010000000000000002 	 Time: 297.10
+[2026/07/22 22:57:24] - ====================Training Epoch 64====================
+[2026/07/22 22:58:30] - [INFO] Test Clean CA: 92.34
+[2026/07/22 22:58:53] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 22:59:16] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 22:59:40] - [INFO] Test trigger types wanetTrigger, ASR: 97.59299781181619
+[2026/07/22 23:00:03] - [INFO] Test trigger types trojanTrigger, ASR: 96.49890597487435
+[2026/07/22 23:00:26] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:00:49] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:01:12] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:01:35] - [INFO] Test trigger types smoothTrigger, ASR: 92.34135642354285
+[2026/07/22 23:01:59] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919099803565
+[2026/07/22 23:02:22] - [INFO] Test trigger types nashTrigger, ASR: 94.7483596968703
+[2026/07/22 23:02:22] - [INFO] LR: 0.0010000000000000002 	 Time: 297.70
+[2026/07/22 23:02:22] - ====================Training Epoch 65====================
+[2026/07/22 23:03:28] - [INFO] Test Clean CA: 92.42
+[2026/07/22 23:03:51] - [INFO] Test trigger types onePixelTrigger, ASR: 93.87308502197266
+[2026/07/22 23:04:14] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:04:37] - [INFO] Test trigger types wanetTrigger, ASR: 96.71772428884026
+[2026/07/22 23:05:00] - [INFO] Test trigger types trojanTrigger, ASR: 97.15536150108021
+[2026/07/22 23:05:24] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:05:47] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:06:10] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:06:33] - [INFO] Test trigger types smoothTrigger, ASR: 91.46608290056692
+[2026/07/22 23:06:56] - [INFO] Test trigger types dynamicTrigger, ASR: 0.6564551453621695
+[2026/07/22 23:07:20] - [INFO] Test trigger types nashTrigger, ASR: 93.87308578992047
+[2026/07/22 23:07:20] - [INFO] LR: 0.0010000000000000002 	 Time: 298.37
+[2026/07/22 23:07:20] - [INFO] Save model weight epoch 65
+[2026/07/22 23:07:20] - ====================Training Epoch 66====================
+[2026/07/22 23:08:27] - [INFO] Test Clean CA: 92.24
+[2026/07/22 23:08:50] - [INFO] Test trigger types onePixelTrigger, ASR: 94.09190340271664
+[2026/07/22 23:09:13] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:09:36] - [INFO] Test trigger types wanetTrigger, ASR: 96.93654266958424
+[2026/07/22 23:09:59] - [INFO] Test trigger types trojanTrigger, ASR: 97.59299781181619
+[2026/07/22 23:10:22] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:10:45] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:11:08] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:11:31] - [INFO] Test trigger types smoothTrigger, ASR: 92.12253804279887
+[2026/07/22 23:11:54] - [INFO] Test trigger types dynamicTrigger, ASR: 0.6564551453621695
+[2026/07/22 23:12:17] - [INFO] Test trigger types nashTrigger, ASR: 94.09190417066445
+[2026/07/22 23:12:17] - [INFO] LR: 0.0010000000000000002 	 Time: 296.99
+[2026/07/22 23:12:17] - ====================Training Epoch 67====================
+[2026/07/22 23:13:23] - [INFO] Test Clean CA: 92.32
+[2026/07/22 23:13:46] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 23:14:09] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:14:32] - [INFO] Test trigger types wanetTrigger, ASR: 98.03063457330416
+[2026/07/22 23:14:55] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181619256017
+[2026/07/22 23:15:18] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:15:41] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:16:03] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:16:26] - [INFO] Test trigger types smoothTrigger, ASR: 90.59080937759099
+[2026/07/22 23:16:49] - [INFO] Test trigger types dynamicTrigger, ASR: 1.0940919131105786
+[2026/07/22 23:17:12] - [INFO] Test trigger types nashTrigger, ASR: 94.7483596968703
+[2026/07/22 23:17:12] - [INFO] LR: 0.0010000000000000002 	 Time: 294.83
+[2026/07/22 23:17:12] - ====================Training Epoch 68====================
+[2026/07/22 23:18:17] - [INFO] Test Clean CA: 92.32
+[2026/07/22 23:18:40] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 23:19:03] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:19:26] - [INFO] Test trigger types wanetTrigger, ASR: 97.3741794310722
+[2026/07/22 23:19:49] - [INFO] Test trigger types trojanTrigger, ASR: 97.81181619256017
+[2026/07/22 23:20:12] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:20:35] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:20:58] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:21:21] - [INFO] Test trigger types smoothTrigger, ASR: 92.56017480428683
+[2026/07/22 23:21:44] - [INFO] Test trigger types dynamicTrigger, ASR: 0.8752735261061521
+[2026/07/22 23:22:07] - [INFO] Test trigger types nashTrigger, ASR: 94.09190417066445
+[2026/07/22 23:22:07] - [INFO] LR: 0.0010000000000000002 	 Time: 294.55
+[2026/07/22 23:22:07] - ====================Training Epoch 69====================
+[2026/07/22 23:23:12] - [INFO] Test Clean CA: 92.4
+[2026/07/22 23:23:35] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 23:23:58] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:24:21] - [INFO] Test trigger types wanetTrigger, ASR: 98.03063457330416
+[2026/07/22 23:24:44] - [INFO] Test trigger types trojanTrigger, ASR: 97.15536150108021
+[2026/07/22 23:25:07] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:25:30] - [INFO] Test trigger types signalTrigger, ASR: 99.56236323851203
+[2026/07/22 23:25:53] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:26:16] - [INFO] Test trigger types smoothTrigger, ASR: 91.02844613907895
+[2026/07/22 23:26:39] - [INFO] Test trigger types dynamicTrigger, ASR: 0.875273529236374
+[2026/07/22 23:27:01] - [INFO] Test trigger types nashTrigger, ASR: 94.52954131612631
+[2026/07/22 23:27:01] - [INFO] LR: 0.0010000000000000002 	 Time: 294.53
+[2026/07/22 23:27:02] - ====================Training Epoch 70====================
+[2026/07/22 23:28:07] - [INFO] Test Clean CA: 92.22
+[2026/07/22 23:28:30] - [INFO] Test trigger types onePixelTrigger, ASR: 94.5295401642046
+[2026/07/22 23:28:53] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:29:16] - [INFO] Test trigger types wanetTrigger, ASR: 98.03063457330416
+[2026/07/22 23:29:39] - [INFO] Test trigger types trojanTrigger, ASR: 97.15536150108021
+[2026/07/22 23:30:02] - [INFO] Test trigger types blendTrigger, ASR: 99.78118161925602
+[2026/07/22 23:30:25] - [INFO] Test trigger types signalTrigger, ASR: 99.78118161925602
+[2026/07/22 23:30:48] - [INFO] Test trigger types CLTrigger, ASR: 100.0
+[2026/07/22 23:31:10] - [INFO] Test trigger types smoothTrigger, ASR: 92.12253804279887
+[2026/07/22 23:31:33] - [INFO] Test trigger types dynamicTrigger, ASR: 1.312910290724339
+[2026/07/22 23:31:56] - [INFO] Test trigger types nashTrigger, ASR: 94.52954131612631
+[2026/07/22 23:31:56] - [INFO] LR: 0.0010000000000000002 	 Time: 294.81
+[2026/07/22 23:31:56] - [INFO] Save model weight epoch 70
+[2026/07/22 23:31:57] - ====================Training Epoch 71====================
+[2026/07/22 23:33:02] - [INFO] Test Clean CA: 92.44
+[2026/07/22 23:33:25] - [INFO] Test trigger types onePixelTrigger, ASR: 93.65426664122867
+[2026/07/22 23:33:49] - [INFO] Test trigger types gridTrigger, ASR: 100.0
+[2026/07/22 23:34:12] - [INFO] Test trigger types wanetTrigger, ASR: 97.3741794310722
+[2026/07/22 23:34:37] - [INFO] Test trigger types trojanTrigger, ASR: 96.93654273636231
