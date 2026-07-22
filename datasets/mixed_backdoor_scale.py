@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import sys
 sys.path.append("..")
 # sys.path.append('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
-os.chdir('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
+#os.chdir('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
 
 if torch.cuda.is_available():
     device = torch.device('cuda')

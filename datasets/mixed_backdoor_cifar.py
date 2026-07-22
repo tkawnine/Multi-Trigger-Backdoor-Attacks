@@ -271,7 +271,8 @@ def generate_trigger_cifar(img, triggerType, mode):
         img = _smoothTrigger(img, mode)
 
     elif triggerType == 'dynamicTrigger':
-        img = _dynamicTrigger(img, mode)
+        #img = _dynamicTrigger(img, mode)
+        return img
 
     elif triggerType == 'nashTrigger':
         img = _nashvilleTrigger(img, mode)

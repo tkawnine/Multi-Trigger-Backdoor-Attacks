@@ -32,7 +32,7 @@ import sys
 
 sys.path.append("..")
 # sys.path.append('/home/iyc1sgh/jupyter_notebook/Multi-Backdoor-Attacks-main/Multi-Trigger-Backdoor') 
-os.chdir('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
+#os.chdir('/data/gpfs/projects/punim0619/yige/Multi-Trigger-Backdoor-Attacks')
 
 def main(args):
     # args = get_arguments().parse_args()
