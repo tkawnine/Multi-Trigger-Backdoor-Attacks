@@ -1,3 +1,5 @@
+#cifar10_lsb dataset
+from datasets.cifar10_lsb import CIFAR10LSB
 import os
 import time
 import argparse
@@ -81,8 +83,20 @@ def main(args):
             transforms.Normalize(MEAN_CIFAR10, STD_CIFAR10)
         ])
 
-        clean_train = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=True, download=True, transform=None)
-        clean_test = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=False, download=True, transform=None)
+        #clean_train = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=True, download=True, transform=None)
+        #clean_test = CIFAR10(root='/data/gpfs/projects/punim0619/datasets', train=False, download=True, transform=None)
+
+        #modified for lsb dataset
+
+
+        LSB_DATASET_PATH =r"C:\Users\user6\Downloads\CIFAR10_lsb data-20261105T081348Z-1-001\CIFAR10_lsb data"
+
+        clean_train = CIFAR10LSB(root=LSB_DATASET_PATH,train=True,transform=None)
+
+        clean_test = CIFAR10LSB(root=LSB_DATASET_PATH,train=False, transform=None)
+
+        print('clean_train:', len(clean_train))
+        print('clean_test:', len(clean_test))
 
         
         if args.attack_type == 'single_trigger': 
